@@ -3,7 +3,7 @@
 Box: Writeup  
 IP: 10.10.10.138
 
-Browsing to ```http://10.10.10.138/``` we see a warning about an 'Eeyore DoS protection script' so we probably shouldn't do any dir busting.
+Browsing to ```http://10.10.10.138/``` we see a warning about an 'Eeyore DoS protection script' so we probably shouldn't do any dirbusting.
 
 The ```/robots.txt``` file has a disallow in place for ```/writeup/``` so of course we'll want to check that out. 
 
