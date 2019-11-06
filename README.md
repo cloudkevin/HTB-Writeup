@@ -62,7 +62,7 @@ This means that we should be able to put our code in ```/usr/bin/local``` and ha
 
 Time for some path injection.
 
-Let's create a bash script the adds a new root user, then have that execute.
+Let's create a bash script that adds a new root user, then have that execute.
 
 First we need to use openssl create a hash of our desired password ```openssl passwd writeup```
 
