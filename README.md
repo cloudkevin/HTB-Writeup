@@ -1,11 +1,11 @@
 # HTB-Writeup
 
-Box: Writeup
+Box: Writeup  
 IP: 10.10.10.138
 
 Browsing to ```http://10.10.10.138/``` we see a warning about an 'Eeyore DoS protection script' so we probably shouldn't do any dir busting.
 
-The /robots.txt file has a disallow in place for /writeup/ so of course we'll want to check that out. 
+The ```/robots.txt``` file has a disallow in place for ```/writeup/``` so of course we'll want to check that out. 
 
 The source code for ```http://10.10.10.138/writeup/``` shows the website is using CMS Made Simple. Running ```searchsploit CMS Made Simple``` shows a lot of results so we need to find out what version we're up against if we want to skid through. The copyright from the source code says 2019 so doing some searching indicates that 2.2.9 or 2.2.10 are the only versions released in that year. This seems like a safe starting point.
 
@@ -82,7 +82,7 @@ And make it executable: ```chmod +x run-parts```
 
 Now start a new SSH session to trigger our script, and check the results with ```cat /etc/passwd```
 
-You should see our new ```rooot``` user added with the correct UID and hash, so let's grab the flag
+You should see our new ```rooot``` user added with the correct UID and hash, so let's grab the flag.
 
 ```
 su rooot
