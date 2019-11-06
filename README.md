@@ -48,7 +48,7 @@ Then we'll launch it to monitor what's going on ```./pspy32.sh```
 
 Start a new SSH session so we can monitor that action first. It's always a good idea to make sure both terminals are viewable so you can see new processes as they happen.
 
-After playing around we can see that every successful SSH auth the following is run:
+After playing around a bit we can see that after every successful SSH auth the following is run:
 
 ```sh -c /usr/bin/env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic.new```
 
