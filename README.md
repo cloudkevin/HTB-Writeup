@@ -42,9 +42,9 @@ Ok so owning user was easy but now we need to get root. There is a great tool ca
 
 We'll copy pspy over to the server so we can use it ```scp pspy32 jkr@10.10.10.138:/home/jkr```
 
-Once it's on the server we'll need to make it executable ```chmod +x pspy32.sh```
+Once it's on the server we'll need to make it executable ```chmod +x pspy32```
 
-Then we'll launch it to monitor what's going on ```./pspy32.sh```
+Then we'll launch it to monitor what's going on ```./pspy32```
 
 Start a new SSH session so we can monitor that action first. It's always a good idea to make sure both terminals are viewable so you can see new processes as they happen.
 
