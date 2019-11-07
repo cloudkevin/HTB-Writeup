@@ -64,7 +64,7 @@ Time for some path injection.
 
 Let's create a bash script that adds a new root user, then have that execute.
 
-First we need to use openssl create a hash of our desired password ```openssl passwd writeup```
+First we will use openssl to create a hash of our desired password ```openssl passwd writeup```
 
 Now create the bash file, add our payload, and make it executable.
 
