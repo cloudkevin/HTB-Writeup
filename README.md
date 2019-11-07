@@ -54,11 +54,11 @@ After playing around a bit we can see that after every successful SSH auth the f
 
 Let's go down the rabbit hole and see if we can abuse it. First of all we can see that something called ```run-parts``` gets executed every time. We can also see that it's being executed by relative path so we can probably hijack this.
 
-If we dig deeper with ```which run-parts``` we see that by default it's in ```/bin/```, but if you look closely at the way env sets the path at login you'll see something interesting. When the path is set, ```/usr/bin/local``` is called before ```/usr/bin``` 
+If we dig deeper with ```which run-parts``` we see that by default it's in ```/bin/```, but if you look closely at the way env sets the path at login you'll see something interesting. When the path is set, ```/usr/local/bin``` is called before ```/usr/bin``` 
 
 We saw earlier that our account was a member of staff, which we can see gives us the write access we need ```find / -group staff 2>/dev/null```
 
-This means that we should be able to put our code in ```/usr/bin/local``` and have it execute next time we SSH into the box.
+This means that we should be able to put our code in ```/usr/local/bin``` and have it execute next time we SSH into the box.
 
 Time for some path injection.
 
