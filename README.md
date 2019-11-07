@@ -11,7 +11,7 @@ The source code for ```http://10.10.10.138/writeup/``` shows the website is usin
 
 With a bit of research, and help from searchsploit, we see that CVE-2019-9053 is a SQL Inject vuln for 2.2.10 with an exploit already available in python. We'll try this one out, but always a good idea to read the source code first though to see what we're doing.
 
-First we can tell that it's written in Python2, but we also want to know what the actual attack is. Looking at ```payload=``` we can see it's a blind SQL injection attack. A good indicator of this is the included ```sleep()``` function. There is also a function to crack the hash once obtained, so we'll give that a shot before trying hashcat. The cracking functionality seems pretty straightforward, running through a provided list using a salt+pw format. I'm going to use the rockyou list for this since everyone should already have a copy.
+First we can tell that it's written in Python2, but we also want to know what the actual attack is. Looking at ```payload=``` we can see it's a blind time-based SQL injection attack. A good indicator of this is the included ```sleep()``` function. There is also a function to crack the hash once obtained, so we'll give that a shot before trying hashcat. The cracking functionality seems pretty straightforward, running through a provided list using a salt+pw format. I'm going to use the rockyou list for this since everyone should already have a copy.
 
 Let's try the exploit: ```python 46635.py -u http://10.10.10.138/writeup/ --crack -w rockyou.txt```
 
