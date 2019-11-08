@@ -42,8 +42,6 @@ Ok so owning user was easy but now we need to get root. There is a great tool ca
 
 We'll copy pspy over to the server so we can use it ```scp pspy32 jkr@10.10.10.138:/home/jkr```  
 
-*Best practice would be to retrieve the file directly from GitHub with ```go get``` rather than transferring from your local machine, but this is easier for right now*
-
 Once it's on the server we'll need to make it executable ```chmod +x pspy32```
 
 Then we'll launch it to monitor what's going on ```./pspy32```
