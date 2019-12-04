@@ -1,4 +1,5 @@
 # HTB-Writeup
+<img src="https://www.hackthebox.eu/badge/image/172381" alt="Hack The Box">
 
 Box: Writeup  
 IP: 10.10.10.138
